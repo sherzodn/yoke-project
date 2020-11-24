@@ -10,5 +10,6 @@ spring:
         git:
           uri: https://github.com/sherzodn/yoke-project
           force-pull: true
-          search-paths:
+          search-paths: config
+
 
