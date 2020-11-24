@@ -1,0 +1,74 @@
+buildscript {
+  repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "org.springframework.boot:spring-boot-gradle-plugin:${project.('spring-boot.version')}"
+    classpath "io.spring.gradle:dependency-management-plugin:${project.('spring-dependency-management.version')}"
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+
+repositories {
+  mavenCentral()
+  maven { url 'https://repo.spring.io/milestone' }
+}
+
+group = "$group"
+version = "$version"
+sourceCompatibility = JavaVersion.VERSION_11
+
+dependencies {
+  implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+  implementation 'org.springframework.boot:spring-boot-starter-web'
+
+  implementation('org.postgresql:postgresql')
+  implementation group: 'org.mapstruct', name: 'mapstruct', version: "${project.property("mapstruct.version")}"
+
+  compile group: 'io.springfox', name: 'springfox-swagger2', version: "${project.('springfox-swagger2.version')}"
+  compile group: 'io.springfox', name: 'springfox-swagger-ui', version: "${project.('springfox-swagger-ui.version')}"
+  compileOnly group: 'org.projectlombok', name: 'lombok', version: "${project.('lombok.version')}"
+
+  testImplementation('org.springframework.boot:spring-boot-starter-test') {
+    exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+  }
+  testCompile group: 'com.h2database', name: 'h2', version: "${project.('h2.version')}"
+
+  annotationProcessor group: 'org.projectlombok', name: 'lombok', version: "${project.('lombok.version')}"
+  annotationProcessor group: 'org.mapstruct', name: 'mapstruct-processor', version: "${project.property("mapstruct.version")}"
+}
+
+test {
+  useJUnitPlatform()
+}
+
+bootJar {
+  mainClassName = 'com.epam.yoke.event.YokeEventApplication'
+}
+
+tasks.withType(JavaCompile) {
+  options.compilerArgs = ['-Amapstruct.suppressGeneratorTimestamp=true']
+}
+
+task classpathJar(type: Jar) {
+  inputs.files sourceSets.main.runtimeClasspath
+
+  archiveFileName = "runboot-classpath.jar"
+  doFirst {
+    // If run in configuration phase, some artifacts may not exist yet (after clean)
+    // and File.toURI can’t figure out what is directory to add the critical trailing slash.
+    manifest {
+      def classpath = sourceSets.main.runtimeClasspath.files
+      attributes "Class-Path": classpath.collect { f -> f.toURI().toString() }.join(" ")
+    }
+  }
+}
+
