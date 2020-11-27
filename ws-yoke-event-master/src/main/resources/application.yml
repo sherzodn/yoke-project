@@ -1,6 +1,11 @@
 spring:
   application:
     name: yoke-event
+  cloud:
+    config:
+      uri: http://localhost:8888
+  profiles:
+    active: dev
 
   jpa:
     database: POSTGRESQL

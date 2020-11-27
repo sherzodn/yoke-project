@@ -1,10 +1,11 @@
 spring:
   application:
-    name: attender-service
-  config:
-    cloud:
+    name: yoke-attender
+  cloud:
+    config:
       uri: htp://localhost:8888
-
+  profiles:
+    active: dev
   management:
     endpoints:
       web:

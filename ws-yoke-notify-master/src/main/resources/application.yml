@@ -3,6 +3,9 @@ spring:
     name: yoke-notify
   profiles:
     active: dev
+  cloud:
+    config:
+      uri: htp://localhost:8888
 
   data:
     mongodb:
