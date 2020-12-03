@@ -1,16 +1,3 @@
 app:
   name: "Yoke Event dev"
-spring:
-  jpa:
-    database: POSTGRESQL
-    show-sql: true
-    generate-ddl: true
-    hibernate:
-      ddl-auto: create
 
-
-    datasource:
-      platform: postgres
-      url: jdbc:postgresql://localhost:5432/postgres
-      username: postgres
-      password: postgres
