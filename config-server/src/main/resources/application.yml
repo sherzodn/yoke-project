@@ -8,8 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/sherzodn/yoke-project
+          uri: https://github.com/sherzodn/yoke-project/tree/master/config
           force-pull: true
-          search-paths: config
 
 
