@@ -1,2 +1,11 @@
-app:
-  name: "Yoke Notify dev"
+hello:
+  message: "Yoke Notify development"
+spring:
+  data:
+    mongodb:
+      host: 127.0.0.1
+      port: 27017
+      authentication-database: admin
+      username: root
+      password: example
+      database: yoke

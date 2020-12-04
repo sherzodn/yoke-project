@@ -52,6 +52,12 @@ test {
   useJUnitPlatform()
 }
 
+dependencyManagement {
+  imports {
+    mavenBom "org.springframework.cloud:spring-cloud-dependencies:Hoxton.M3"
+  }
+}
+
 bootJar {
   mainClassName = 'com.epam.yoke.event.YokeEventApplication'
 }

@@ -1,5 +1,5 @@
-app:
-  name: "Yoke Event dev"
+hello:
+  message: "Yoke Event development"
 spring:
   jpa:
     database: POSTGRESQL

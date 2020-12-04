@@ -4,8 +4,7 @@ spring:
   cloud:
     config:
       uri: htp://localhost:8888
-  profiles:
-    active: dev
+      profile: dev
   management:
     endpoints:
       web:

@@ -46,6 +46,12 @@ tasks.withType(JavaCompile) {
   options.compilerArgs = ['-Amapstruct.suppressGeneratorTimestamp=true']
 }
 
+dependencyManagement {
+  imports {
+    mavenBom "org.springframework.cloud:spring-cloud-dependencies:Hoxton.M3"
+  }
+}
+
 bootJar {
   mainClassName = 'com.epam.yoke.notify.YokeNotifyApplication'
 }
