@@ -1,2 +1,5 @@
+spring:
+  application:
+    name: config-server
 encrypt:
   key: Epam2020EncKey
