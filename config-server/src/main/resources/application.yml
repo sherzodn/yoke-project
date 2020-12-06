@@ -8,8 +8,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/sherzodn/yoke-project.git
-          force-pull: true
-          search-paths: configuration
-
-
+          uri: file://C:/projects/configuration
+#          uri: https://github.com/sherzodn/yoke-project.git
+#          search-paths: configuration

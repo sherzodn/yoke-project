@@ -9,8 +9,9 @@ spring:
       ddl-auto: create
 
 
-    datasource:
-      platform: postgres
-      url: jdbc:postgresql://localhost:5432/postgres
-      username: postgres
-      password: postgres
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+
