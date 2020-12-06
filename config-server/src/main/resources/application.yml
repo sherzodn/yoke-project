@@ -8,5 +8,6 @@ spring:
       server:
         git:
           uri: file://C:/projects/configuration
+      enabled: true
 #          uri: https://github.com/sherzodn/yoke-project.git
 #          search-paths: configuration
