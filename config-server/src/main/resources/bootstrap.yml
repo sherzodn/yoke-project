@@ -1,5 +1,8 @@
-spring:
-  application:
-    name: config-server
+#encrypt:
+#  key: Epam2020EncKey
 encrypt:
-  key: Epam2020EncKey
+  key-store:
+    location: classpath:config.keystore
+    alias: config
+    password: config
+    secret: config

@@ -1,7 +1,5 @@
 server:
   port: 8888
-encrypt:
-  key: Epam2020EncKey
 spring:
   application:
     name: config-server
