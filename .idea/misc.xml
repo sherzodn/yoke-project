@@ -3,6 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/config-server" />
+    <file type="web" url="file://$PROJECT_DIR$/eureka-server" />
     <file type="web" url="file://$PROJECT_DIR$/ws-yoke-attender-master" />
     <file type="web" url="file://$PROJECT_DIR$/ws-yoke-event-master" />
     <file type="web" url="file://$PROJECT_DIR$/ws-yoke-notify-master" />
