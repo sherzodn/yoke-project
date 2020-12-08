@@ -7,5 +7,5 @@ spring:
       port: 27017
       authentication-database: admin
       username: root
-      password: example
+      password: '{cipher}AQAM7Lci+XsJeY36rzEjEn5HNjcpIKvAEkzhlqju5fXuiLwmA1m94B229kzP58cCIn7gjkOFOfYtEvJLALSHn0NXUN2MjNGpxyiL8OwylYFa49BkAq/ZJ6M81RAQ5AiNmUjEpfWy5SY4wlrv/Xk6ZmGr4r/PmYLximGFE9EY2uCSSjRpjQYKKzR4T5HkH9XRYQ+gHYZLE+EjIQ8ChESkJwFoLgLAheCmSLIg5t3pgmiMzdHz5f7JqAwqErpedKl0MToRGVC5ZQ5g8o73RFVB4PxhnKXFGdi7P4quddB5B5Lqt3bmmROlTCqgdCvpr3a8By3/64/bUPpRN72bonNkmUNQelRPpK+Zgr9w5F3eU/QuIguoF1j1IAigwfo59vYJ9tI='
       database: yoke

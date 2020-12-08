@@ -20,6 +20,7 @@ ext {
 dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-config-server'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compile group: 'org.springframework.security', name: 'spring-security-rsa', version: '1.0.9.RELEASE'
 }
 
 dependencyManagement {

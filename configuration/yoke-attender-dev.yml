@@ -1,2 +1,17 @@
 hello:
   message: "Yoke Attender development"
+  
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+
+
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: "{cipher}AQCtgp/sFa1UmA05f/qZssWn8FHnfsrOv+uFhU9Ovmtda5Omuv/Ctpt8EEcs39syqBJhrnCH5FsBm6pJ5FiBETySH71Bc1KzJ4pr1vIhpkNgvjQolyj92Fly2SLPH4WGUsRPQ3PeSO4AThCPh/5yab/+NsRd4An9Coa8RBde2ZwvvPV6FCyUpEH1bGn5OJvtfWjF8NXfJUKvvDLHIMmTH2c5sY+49oG/dtDPIzTVFfE3PI6FDNr0/IP6krhO59Gd5ArtwjC0NEatnZNjXGQGvGDSqB3DQ/d7OhcZAFmEScfu6J7XiI7aq1oPkl1w+tSDBrH8haJAVImq9/LWM37ZGdNHQpOG03MkJteioW35othxffvzjPw2dnBIlZg4wiqhWHU="

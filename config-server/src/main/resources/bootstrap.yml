@@ -1,8 +1,8 @@
-#encrypt:
-#  key: Epam2020EncKey
 encrypt:
-  key-store:
-    location: classpath:config.keystore
-    alias: config
-    password: config
-    secret: config
+  key: Epam2020EncKey
+#encrypt:
+#  key-store:
+#    location: classpath:config.keystore
+#    alias: config
+#    password: config
+#    secret: config
